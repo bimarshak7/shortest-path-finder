@@ -1,12 +1,12 @@
-import React from 'react';
-import './app.css'
+import React from "react"
+import Visualize from "./components/visualize"
+import "./app.css"
 const App = () => {
 	return (
-		<div className='uppercase box'>
-			<h1>Hello React!</h1>
-		This app uses webpack and babel.
+		<div className="box">
+			<Visualize />
 		</div>
 	)
 }
 
-export default App;
+export default App
