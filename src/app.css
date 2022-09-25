@@ -1,0 +1,11 @@
+@tailwind preflight;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* Custom css */
+
+.box{
+text-align: center;
+}
