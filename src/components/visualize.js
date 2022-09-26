@@ -2,14 +2,13 @@ import React, { useState } from "react"
 import { Node } from "./Node/node"
 import { initGrid } from "../utils/utils"
 import { gaijatra, getNodesInShortestPathOrder } from "../utils/algo"
-import "./visualize.css"
 
 const Visualize = () => {
 	const [endP, setEndP] = useState({
-		SR: 10,
-		SC: 15,
-		ER: 2,
-		EC: 12,
+		SR: 0,
+		SC: 0,
+		ER: 18,
+		EC: 48,
 	})
 	const [grid, setGrid] = useState(initGrid())
 	const [isClicked, setClick] = useState(false)
@@ -73,7 +72,7 @@ const Visualize = () => {
 
 	return (
 		<div>
-			<h1>Path Visualizer</h1>
+			<h1>Shortest Path Visualizer</h1>
 			<div className="toolbar">
 				<button onClick={e => setTool("Start Point")}>
 					Start Point <span className="node-start">&#9739;</span>
@@ -81,7 +80,9 @@ const Visualize = () => {
 				<button onClick={e => setTool("End Point")}>
 					End Point <span className="node-end icon">&#9738;</span>
 				</button>
-				<button onClick={e => setTool("wall")}>Wall</button>
+				<button onClick={e => setTool("wall")}>
+					Wall <span className="node-wall">ab</span>
+				</button>
 				<button onClick={solve}>Visualize</button>
 				<button onClick={resetGrid}>Reset Grid</button>
 			</div>
