@@ -7,11 +7,19 @@ const Node = ({
 	isStart,
 	isWall,
 	isPath,
-	onMouseDown,
+	isTraced,
+	addWall,
 	onClick,
-	onMouseUp,
+	clikHandler,
 	row,
+	tool,
 }) => {
+	const mClick = e => {
+		if (tool == "wall") {
+			onClick(true)
+			addWall(e, row, col, true)
+		}
+	}
 	return (
 		<div
 			className={`node ${
@@ -23,17 +31,16 @@ const Node = ({
 					? "node-wall"
 					: isPath
 					? "node-path"
+					: isTraced
+					? "node-traced"
 					: ""
 			}`}
-			onClick={e => onClick(e, row, col)}
+			onMouseDown={e => mClick(e)}
+			onMouseEnter={e => addWall(e, row, col)}
+			onMouseUp={e => onClick(false)}
+			onClick={e => clikHandler(e, row, col)}
 		>
-			{isStart ? (
-				<span className="symbol">&#9739;</span>
-			) : isEnd ? (
-				<span className="symbol">&#9738;</span>
-			) : (
-				""
-			)}
+			{isStart ? <span>&#9739;</span> : isEnd ? <span>&#9738;</span> : ""}
 		</div>
 	)
 }

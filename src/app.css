@@ -1,11 +1,45 @@
-@tailwind preflight;
+body {
+	background: rgb(0, 4, 29);
+	color: whitesmoke;
+}
+.box {
+	text-align: center;
+}
 
-@tailwind components;
+button {
+	height: 2.5em;
+	background-color: rgb(199, 66, 9);
+	color: azure;
+	border-radius: 10%;
+	font-weight: 600;
+	font-size: 1em;
+}
 
-@tailwind utilities;
+.icon {
+	font-weight: 900;
+}
+.grid {
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: center;
+}
+.toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 1rem;
+}
+.toolbar button {
+	margin-left: 7px;
+}
 
-/* Custom css */
+.message {
+	font-size: 1.4rem;
+}
 
-.box{
-text-align: center;
+h1 {
+	margin: 0;
 }

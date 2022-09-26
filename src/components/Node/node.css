@@ -1,9 +1,12 @@
 .node {
 	width: 25px;
 	height: 25px;
-	outline: 1px solid rgb(175, 216, 248);
-	transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	outline: 1px solid rgb(68, 3, 77);
+	color: aliceblue;
+	font-weight: bolder;
+	font-size: 25px;
 }
+
 .node-end {
 	background-color: red;
 }
@@ -12,13 +15,13 @@
 	background-color: green;
 }
 .node-wall {
-	background-color: rgb(12, 53, 71);
+	width: 25px;
+	height: 25px;
+	background-color: rgb(170, 50, 11);
 }
 .node-path {
 	background-color: rgb(235, 147, 15);
 }
-.symbol {
-	color: aliceblue;
-	font-weight: bolder;
-	font-size: 25px;
+.node-traced {
+	background-color: rgb(88, 169, 204);
 }

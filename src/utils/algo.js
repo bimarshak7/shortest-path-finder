@@ -2,7 +2,6 @@ export function gaijatra(grid, start, end) {
 	const visitedNodesInOrder = []
 	start.distance = 0
 	const unvisitedNodes = grid.flat()
-	let c = 0
 	while (unvisitedNodes.length) {
 		unvisitedNodes.sort((nodeA, nodeB) => nodeA.distance - nodeB.distance)
 		const closestNode = unvisitedNodes.shift()
@@ -13,7 +12,6 @@ export function gaijatra(grid, start, end) {
 		if (closestNode === end) return visitedNodesInOrder
 		updateUnvisitedNeighbors(closestNode, grid)
 	}
-	return visitedNodesInOrder
 }
 
 function getUnvisitedNode(node, grid) {
@@ -29,7 +27,7 @@ function getUnvisitedNode(node, grid) {
 function updateUnvisitedNeighbors(node, grid) {
 	const unvisitedNeighbors = getUnvisitedNode(node, grid)
 	for (const neighbor of unvisitedNeighbors) {
-		neighbor.distance = node.distance + 1
+		neighbor.distance = node.distance + 1 //nodes in grid array gets updated (similar to pointer links)
 		neighbor.previousNode = node
 	}
 }
