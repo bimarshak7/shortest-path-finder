@@ -12,15 +12,40 @@
 }
 
 .node-start {
-	background-color: green;
+	background-color: rgb(100, 4, 109);
 }
 .node-wall {
 	color: rgb(170, 50, 11);
 	background-color: rgb(170, 50, 11);
 }
 .node-path {
-	background-color: rgb(235, 147, 15);
+	animation-name: tracePath;
+	animation-duration: 0.7s;
+	background-color: rgb(16, 255, 57);
 }
+@keyframes tracePath {
+	0% {
+		transform: scale(0.1);
+		background-color: rgba(248, 244, 7, 0.295);
+		border-radius: 100%;
+	}
+
+	50% {
+		transform: scale(0.5);
+		background-color: rgba(228, 224, 6, 0.595);
+	}
+
+	75% {
+		transform: scale(1);
+		background-color: rgba(255, 217, 0, 0.795);
+		border-radius: 50%;
+	}
+
+	100% {
+		background-color: rgb(16, 255, 57);
+	}
+}
+
 .node-traced {
 	animation-name: tracedNodes;
 	animation-duration: 1s;
