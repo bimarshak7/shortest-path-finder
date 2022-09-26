@@ -87,7 +87,7 @@ const Visualize = () => {
 				<button onClick={resetGrid}>Reset Grid</button>
 			</div>
 			<div className="message">Select the grid position for {tool}.</div>
-			<div className="grid">
+			<div>
 				{grid.map((Row, rowIdx) => (
 					<div key={rowIdx} className="row">
 						{Row.map((el, idx) => (

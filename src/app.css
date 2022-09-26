@@ -14,13 +14,13 @@ button {
 	border: 1px orangered ridge;
 	font-weight: 600;
 	font-size: 1em;
+	cursor: pointer;
 }
 
 .icon {
 	font-weight: 900;
 }
-.grid {
-}
+
 .row {
 	display: flex;
 	flex-wrap: wrap;
