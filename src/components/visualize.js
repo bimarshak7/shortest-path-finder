@@ -72,7 +72,7 @@ const Visualize = () => {
 
 	return (
 		<div>
-			<h1>Shortest Path Visualizer</h1>
+			<h1>Shortest Path Visualizer (Dijkstra's algorithm)</h1>
 			<div className="toolbar">
 				<button onClick={e => setTool("Start Point")}>
 					Start Point <span className="node-start">&#9739;</span>
